@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Login {% endblock %}
+{%block content %}
+<form method="POST">
+<div class="col-sm-6 ">
+<div class="card  ">
+    <div class="card-header bg-info"  >Login</div>
+    <div class="card-body">
+        {% csrf_token %}
+        {{form.as_p}}
+       
+    </div>
+    <div class="card-footer"> <input type="submit" class="btn btn-primary " >
+    </div>
+</form>
+</div>
+</div>
+{% endblock %}

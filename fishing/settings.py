@@ -25,7 +25,10 @@ SECRET_KEY = 'gokj7)l4*-rfz86-vukag-uhk&f4g@zf2bzsu_@8ea-j$)o_*c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['biome.consulting','www.biome.consulting','py']
+if DEBUG:
+    ALLOWED_HOSTS=[]
+else:
+    ALLOWED_HOSTS = ['biome.consulting','www.biome.consulting','py']
 
 
 # Application definition
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pages'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +58,7 @@ ROOT_URLCONF = 'fishing.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,6 +135,5 @@ MEDIA = '/media/'
 MEDIA_ROOT ='/home/biommcwj/public_html/media'
 STATIC_ROOT ='/home/biommcwj/public_html/static'
 STATICFILES_DIRS=[BASE_DIR +'/assets',]
-
-
-
+LOGIN_REDIRECT_URL='pages:home'
+LOGOUT_REDIRECT_URL='pages:logout'

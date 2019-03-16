@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'gokj7)l4*-rfz86-vukag-uhk&f4g@zf2bzsu_@8ea-j$)o_*c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['biome.consulting','www.biome.consulting','127.0.0.1']
+ALLOWED_HOSTS = ['biome.consulting','www.biome.consulting','py']
 
 
 # Application definition

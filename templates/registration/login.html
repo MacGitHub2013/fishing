@@ -10,9 +10,14 @@
         {{form.as_p}}
        
     </div>
-    <div class="card-footer"> <input type="submit" class="btn btn-primary " >
+    <div class="card-footer">
+         <button type="submit" class="btn btn-primary " >Login</button>
+         <div >
+             <a class="link" href="{% url 'password_reset' %}" >Forgot Password?</a>
+         </div>
     </div>
 </form>
 </div>
 </div>
+
 {% endblock %}

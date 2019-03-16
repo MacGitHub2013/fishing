@@ -126,7 +126,19 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'server232.web-hosting.com'
+    EMAIL_PORT = 587
+    EMAIL_HOST_USER = 'biommcwj'
+    EMAIL_HOST_PASSWORD = 'New2019*'
+    DEFAULT_FROM_EMAIL='info@biome.consulting'
+    SERVER_EMAIL= 'info@biome.consulting'
+    EMAIL_USE_TLS = True
+    ADMINS= [('John', 'info@biome.consulting'),]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 

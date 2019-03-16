@@ -131,11 +131,14 @@ if DEBUG:
     
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST='smtp.biome.consulting'
-    EMAIL_PORT='25'
-    EMAIL_HOST_USER = 'info@biome.consulting'
+    EMAIL_HOST = 'server232.web-hosting.com'
+    EMAIL_PORT = 587
+    EMAIL_HOST_USER = 'biommcwj'
     EMAIL_HOST_PASSWORD = 'New2019*'
-
+    DEFAULT_FROM_EMAIL='info@biome.consulting'
+    SERVER_EMAIL= 'info@biome.consulting'
+    EMAIL_USE_TLS = True
+    ADMINS= [('John', 'info@biome.consulting'),]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 

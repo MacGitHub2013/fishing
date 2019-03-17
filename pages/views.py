@@ -6,5 +6,3 @@ from django.shortcuts import render
 def home_view(request):
     return render (request,"pages/home.html")
 
-def logout_view(request):
-    return render(request, "registration/logout.html")

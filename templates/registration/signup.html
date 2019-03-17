@@ -3,19 +3,16 @@
 {% block title %}Login {% endblock %}
 {%block content %}
 <form method="POST">
-<div class="col-sm-6 ">
+<div class="col-sm-8 ">
 <div class="card  ">
-    <div class="card-header bg-info"  >Login</div>
+    <div class="card-header bg-info"  >Signup</div>
     <div class="card-body">
         {% csrf_token %}
         {{form|crispy}}
        
     </div>
     <div class="card-footer">
-         <button type="submit" class="btn btn-primary " >Login</button>
-         <div >
-             <a class="link" href="{% url 'password_reset' %}" >Forgot Password?</a>
-         </div>
+         <button type="submit" class="btn btn-primary " >Signup</button>
     </div>
 </form>
 </div>

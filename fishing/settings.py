@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pages'
+    'pages',
+    'user',
+    'crispy_forms',
+   
 ]
 
 MIDDLEWARE = [
@@ -148,4 +151,5 @@ MEDIA_ROOT ='/home/biommcwj/public_html/media'
 STATIC_ROOT ='/home/biommcwj/public_html/static'
 STATICFILES_DIRS=[BASE_DIR +'/assets',]
 LOGIN_REDIRECT_URL='pages:home'
-LOGOUT_REDIRECT_URL='pages:logout'
+LOGOUT_REDIRECT_URL='login'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

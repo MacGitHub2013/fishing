@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from user.views import BCreateUserView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('profile/',include('user.urls'))
+    path('profile/signup',BCreateUserView.as_view(),name='signup' ),
+    path('profile/', include('userprofile.urls'))
+    
 ]

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Fish | {{block.super}} {% endblock %}
+{%block content %}
+<form method="POST">
+    {% csrf_token %}
+{{form|crispy}}
+
+Delete?
+<br/>
+<button class="btn btn-primary"  type="submit">Yes </button>
+<a class ="btn btn-secondary" href="./" >Back</a>
+</form>
+{%endblock %}

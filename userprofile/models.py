@@ -12,7 +12,7 @@ class UserProfile(models.Model):
     district = models.CharField(max_length = 100)
     created_date = models.DateField(auto_now=True,auto_now_add=False)
     updated_date = models.DateField(auto_now=False, auto_now_add=True)
-
+   
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):

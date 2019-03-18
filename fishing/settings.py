@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'pages',
     'user',
     'crispy_forms',
-    'userprofile'
+    'userprofile',
+    'fish'
 ]
 
 MIDDLEWARE = [

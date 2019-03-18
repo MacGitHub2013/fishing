@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('profile/signup',BCreateUserView.as_view(),name='signup' ),
-    path('profile/', include('userprofile.urls'))
+    path('profile/', include('userprofile.urls')),
+    path('fish/',include ('fish.urls'))
     
 ]

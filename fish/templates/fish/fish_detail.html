@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Fish | {{block.super}} {% endblock %}
+{%block content %}
+
+<ul>
+  
+    <li> {{Fish.name}} - {{ Fish.get_fish_type_display }}<br/>
+        {{Fish.timestamp}}<br/>
+        {{Fish.updated}}<br/>
+        {% if Fish.alias %}
+          {{Fish.alias}}<br/>
+        {% endif %}
+        <a href ="{% url 'fish-update' Fish.id %}" > Edit</a>
+        <a href ="{% url 'fish-delete' Fish.id %}" > Delete</a>
+        <a href="../" >Back</a>
+        
+    </li>
+
+
+  
+</ul>
+
+{%endblock %}

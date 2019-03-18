@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Fish | {{block.super}} {% endblock %}
+{%block content %}
+
+<ul>
+    {% for obj in object_list %}
+    <li> <a href ="{% url 'fish-details' obj.id %}" >{{obj.name}} - {{ obj.get_fish_type_display }}</a> <br/>
+    
+        
+    </li>
+
+
+    {%endfor %}
+</ul>
+
+{%endblock %}
